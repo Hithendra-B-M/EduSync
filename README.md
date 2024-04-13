@@ -9,7 +9,7 @@ An AI-based chatbot was implemented in the portal to address user-specific needs
 To deploy this project run
 
 ```bash
-    git clone https://github.com/Cipher2002/EduSync.git
+    git clone https://github.com/Hithendra-B-M/EduSync.git
     cd EduSync
     flask run 
 ```
