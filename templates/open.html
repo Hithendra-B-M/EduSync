@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+{%block link%}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='open.css') }}">
+{%endblock link%}
+{% block content %}
+<h1>Upload all the files requested below</h1>
+<h4>(Make sure that all the files are of .pdf type and each one of them is below 1 MB) </h4>
+<div class="container">
+    <form class="form" method = 'POST' enctype="multipart/form-data" action="">
+        {% for i in index %}
+        <label>{{i}}</label>
+        <input name="{{i}}" type="file" class="file-upload-field" value="" id = "file of {{i}}" required accept=".pdf" >
+        <br><br>
+        {% endfor %}
+        <button type='submit' name = 'submitDoc' id = 'sub' value = 'submit'>Submit</button> 
+    </form>
+</div>
+
+{% endblock content %}
+  
+   
+{% block code%}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $("#upload-form").on("submit", function(event) {
+        event.preventDefault();
+
+        var formData = new FormData();
+        formData.append("file", $("#file-input")[0].files[0]);
+
+        $.ajax({
+          url: "/upload",
+          type: "POST",
+          data: formData,
+          processData: false,  // tell jQuery not to process the data
+          contentType: false   // tell jQuery not to set contentType
+        }).done(function(data) {
+          console.log(data);
+        });
+      });
+    </script>
+    <script>
+        $("form").on("change", ".file-upload-field", function(){ 
+        $(this).parent(".file-upload-wrapper").attr("data-text",         $(this).val().replace(/.*(\/|\\)/, '') );
+    });
+      </script>
+{% endblock code%}

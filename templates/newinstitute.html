@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/static/css/index.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha384-... </code>"
+      crossorigin="anonymous"
+    />
+
+    <title>EduSync</title>
+    <link rel="title icon" href="/static/images/head.png" type="image/png" />
+  </head>
+  <body>
+    <div id="logo-container">
+      <img id="load" src="/static/images/loader.jpg" alt="Logo" style="width: 350px; height: 300px">
+    </div>
+    <div id="content">
+    <header>
+      <div>
+        <img
+          src="/static/images/logo1.png"
+          alt="Your Logo"
+          id="logo"
+          style="width: 300px; height: 60px"
+        />
+      </div>
+      <div>
+        <img 
+          src="/static/images/emb.png"
+         id="emblem"
+          style="width: 120px; height: 90px"
+        />
+      </div>
+      <div id="buttons">
+        <span id="text-size" data-translate>Text Size</span>
+        <button class="text-button" onclick="increaseFontSize()">A+</button>
+        <button class="text-button" onclick="resetFontSize()">A</button>
+        <button class="text-button" onclick="decreaseFontSize()">A-</button>
+        <a href="{{ url_for('login') }}" class="login-button" data-translate>Login</a>
+        <a class="register-button" href="{{ url_for('register') }}" data-translate>Register</a>
+      </div>
+    </header>
+    
+    <section id="nav">
+      <div id="nav-links">
+       
+        <a href="/templates/index.html" class="nav-link" data-translate>Home</a>
+        <a href="https://www.aicte-india.org/schemes" class="nav-link" data-translate>Courses</a>
+        <a href="https://www.aicte-india.org/bulletins" class="nav-link" data-translate>News</a>
+        
+        <a href="https://www.aicte-india.org/about-us/history" class="nav-link" data-translate>About</a>
+        <a href="#" class="nav-link" data-translate>Affidavit</a>
+
+        <select id="language-select" class="nav-link" name="languages" style="background-color: #DAB88B; border-color: #DAB88B;color: white">
+          <option value="en">English</option>
+          <option value="as">Assamese</option>
+          <option value="hi">Hindi</option>
+          <option value="bn">Bengali</option>
+          <option value="gu">Gujrati</option>
+          <option value="kn">Kannada</option>
+          <option value="ml">Malayalam</option>
+          <option value="mr">Marathi</option>
+          <option value="or">Odia</option>
+          <option value="pa">Punjabi</option>
+          <option value="ta">Tamil</option>
+          <option value="te">Telugu</option>
+        </select>
+        
+      </div>
+
+      <div id="about-link">
+     
+        <span id="spanDate"></span>
+        <span class="horizontal-space"></span>
+
+        <span id="spanTime"></span>
+      </div>
+    </section>
+    <div class="incards-container">
+    <div class="incards" id="cards1" >
+        <div>
+            <img src="/static/images/registration.png " style="height: 200px;margin-left: 90px;margin-top: 10px;opacity: 0.9;">
+
+            <p style="text-align: center;"><a href="#online"> Registration</a></p>
+            
+            
+       
+        </div>
+     
+        
+        
+      </div>
+    
+      <div id="vertical-line"></div>
+    
+      <div class="incards" id="cards2" >
+        <div>
+            <img src="/static/images/process.png " style="height: 200px;margin-left: 90px;margin-top: 10px;opacity: 0.9;">
+
+            <p style="text-align: center;">Process</p>
+            
+            
+       
+        </div>
+    </div>
+    </div>
+    
+    <svg display="none">
+        <symbol id="arrow">
+            <polyline points="7 10,12 15,17 10" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+        </symbol>
+    </svg>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <section id="online">
+    <div>
+    <h1>Steps to fill the online application</h1>
+    <div id="timeline" class="timeline">
+        <div class="btn-group">
+            <button class="btn" type="button" data-action="expand">Expand All</button>
+            <button class="btn" type="button" data-action="collapse">Collapse All</button>
+        </div>
+        <div class="timeline__item">
+            <div class="timeline__item-header">
+                <button class="timeline__arrow" type="button" id="item1" aria-labelledby="item1-name" aria-expanded="false" aria-controls="item1-ctrld" aria-haspopup="true" data-item="1">
+                    <svg class="timeline__arrow-icon" viewBox="0 0 24 24" width="24px" height="24px">
+                        <use href="#arrow" />
+                    </svg>
+                </button>
+                <span class="timeline__dot"></span>
+                <span id="item1-name" class="timeline__meta">
+              
+                    <strong class="timeline__title">Institute Details</strong>
+                </span>
+            </div>
+            <div class="timeline__item-body" id="item1-ctrld" role="region" aria-labelledby="item1" aria-hidden="true">
+                <div class="timeline__item-body-content">
+                    <p class="timeline__item-p">1.Name of the Institute<br>
+                        2.Type of Institution<br>
+                        3.Address of the Institute<br>
+                        
+                        4.Name of the Governing Body<br>
+                        5.Details of the Affiliating University (if applicable)</p>
+                </div>
+            </div>
+        </div>
+        <div class="timeline__item">
+            <div class="timeline__item-header">
+                <button class="timeline__arrow" type="button" id="item2" aria-labelledby="item2-name" aria-expanded="false" aria-controls="item2-ctrld" aria-haspopup="true" data-item="2">
+                    <svg class="timeline__arrow-icon" viewBox="0 0 24 24" width="24px" height="24px">
+                        <use href="#arrow" />
+                    </svg>
+                </button>
+                <span class="timeline__dot"></span>
+                <span id="item2-name" class="timeline__meta">
+                   
+                    <strong class="timeline__title">Contact Details</strong>
+                </span>
+            </div>
+            <div class="timeline__item-body" id="item2-ctrld" role="region" aria-labelledby="item2" aria-hidden="true">
+                <div class="timeline__item-body-content">
+                    <p class="timeline__item-p">1.Main phone number<br>
+                        2.Website URL<br>
+                        3.Email address<br>
+                        4.Social media handles</p>
+                </div>
+            </div>
+        </div>
+        <div class="timeline__item">
+            <div class="timeline__item-header">
+                <button class="timeline__arrow" type="button" id="item3" aria-labelledby="item3-name" aria-expanded="false" aria-controls="item3-ctrld" aria-haspopup="true" data-item="3">
+                    <svg class="timeline__arrow-icon" viewBox="0 0 24 24" width="24px" height="24px">
+                        <use href="#arrow" />
+                    </svg>
+                </button>
+                <span class="timeline__dot"></span>
+                <span id="item3-name" class="timeline__meta">
+                    <strong class="timeline__title">Questionnaire</strong>
+                </span>
+            </div>
+            <div class="timeline__item-body" id="item3-ctrld" role="region" aria-labelledby="item3" aria-hidden="true">
+                <div class="timeline__item-body-content">
+                    <p class="timeline__item-p">Queries about <br>the institution</p>
+                </div>
+            </div>
+        </div>
+        <div class="timeline__item">
+            <div class="timeline__item-header">
+                <button class="timeline__arrow" type="button" id="item4" aria-labelledby="item4-name" aria-expanded="false" aria-controls="item4-ctrld" aria-haspopup="true" data-item="4">
+                    <svg class="timeline__arrow-icon" viewBox="0 0 24 24" width="24px" height="24px">
+                        <use href="#arrow" />
+                    </svg>
+                </button>
+                <span class="timeline__dot"></span>
+                <span id="item4-name" class="timeline__meta">
+                   
+                    <strong class="timeline__title">Program and course details</strong>
+                </span>
+            </div>
+            <div class="timeline__item-body" id="item4-ctrld" role="region" aria-labelledby="item4" aria-hidden="true">
+                <div class="timeline__item-body-content">
+                    <p class="timeline__item-p">1.Program Name<br>
+                        2.Program Level<br>
+                        3.Program Duration<br>
+                        4.Intake Capacity<br>
+                        5.Affiliation (if applicable)<br>
+                       
+                        
+                        6.Course Name<br>
+                        7.Course Code<br>
+                        8.Course Credits<br>
+                        9.Course Type<br>
+                        10.Prerequisites<br>
+                        11.Course Description<br>
+                        12.Syllabus<br>
+                        
+                        13.Faculty<br>
+                        14.Laboratories and Equipment<br>
+                        15.Learning Resources <br>
+                        16.Upload scanned copies of course syllabus, approved curriculum documents, faculty appointment letters</p>
+                </div>
+            </div>
+        </div>
+        <div class="timeline__item">
+            <div class="timeline__item-header">
+                <button class="timeline__arrow" type="button" id="item5" aria-labelledby="item5-name" aria-expanded="false" aria-controls="item5-ctrld" aria-haspopup="true" data-item="5">
+                    <svg class="timeline__arrow-icon" viewBox="0 0 24 24" width="24px" height="24px">
+                        <use href="#arrow" />
+                    </svg>
+                </button>
+                <span class="timeline__dot"></span>
+                <span id="item5-name" class="timeline__meta">
+                    
+                    <strong class="timeline__title">Infrastructure details</strong>
+                </span>
+            </div>
+            <div class="timeline__item-body" id="item5-ctrld" role="region" aria-labelledby="item5" aria-hidden="true">
+                <div class="timeline__item-body-content">
+                    <p class="timeline__item-p">1.Total Land Area<br>
+                        2.Building Area<br>
+                        3.Location<br>
+                        4.Building Plans<br>
+                        5.Ownership Documents<br>
+                        6.Building Approvals<br>
+                          <b>Classrooms and Laboratories:</b><br>
+                        
+                        7.Number of Classrooms<br>
+                        8.Classroom Area<br>
+                        9.Laboratory Facilities<br>
+                        11.Equipment<br>
+                        12.Safety and Security Measures<br>
+                        <b>Library:</b><br>
+                        
+                        13.Total Area<br>
+                        14.Collection<br>
+                        15.Subscription Services<br>
+                        16.Seating Capacity<br>
+                        <b>Computer Centre:</b><br>
+                        
+                        17.Number of Computers<br>
+                        18.Software and Applications<br>
+                        19.Internet Access<br>
+                        <b>Other Facilities:</b><br>
+                        
+                        20.Hostel Facilities (if applicable)<br>
+                        21.Sports Complex and Recreation Facilities<br>
+                        22.Medical Facilities<br>
+                        23.Accessibility Features<br>
+                        <b>Supportting Documents:</b><br>
+                        1.Upload photographs of classrooms, laboratories, library, computer centre, and other facilities.<br>
+                        2.Submit copies of equipment purchase orders or invoices.<br>
+                        3.Provide certificates of library subscriptions and internet service subscriptions.<br>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="timeline__item">
+            <div class="timeline__item-header">
+                <button class="timeline__arrow" type="button" id="item6" aria-labelledby="item6-name" aria-expanded="false" aria-controls="item6-ctrld" aria-haspopup="true" data-item="6">
+                    <svg class="timeline__arrow-icon" viewBox="0 0 24 24" width="24px" height="24px">
+                        <use href="#arrow" />
+                    </svg>
+                </button>
+                <span class="timeline__dot"></span>
+                <span id="item6-name" class="timeline__meta">
+               
+                    <strong class="timeline__title">TER charges</strong>
+                </span>
+            </div>
+            <div class="timeline__item-body" id="item6-ctrld" role="region" aria-labelledby="item6" aria-hidden="true">
+                <div class="timeline__item-body-content">
+                    <p class="timeline__item-p">1.Approval Fee<br>
+                        2.Extension Fee<br>
+                        3.Inspection Fee<br>
+                        4.Other Fees</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+</body>
+<script src="/static/js/newinstitute.js"></script>
+</html>

@@ -1,0 +1,99 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 20px; /* Set margin to create distance from the margins */
+    padding: 0;
+    border: solid rgb(166, 162, 162) 3px;
+    border-radius: 5px;
+}
+  
+.wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    
+}
+
+input {
+    padding-left: 20px;
+}
+
+input[type="radio"] {
+    display: inline-block;
+    vertical-align: middle; /* Align the radio button with the label vertically */
+    margin-right: 5px; /* Adjust the margin as needed */
+  }
+  
+  label {
+    display: inline-block;
+    vertical-align: middle; /* Align the label with the radio button vertically */
+    margin-bottom: 10px; /* Adjust the margin as needed */
+  }
+  
+
+h1,h4 {
+    text-align: center;
+    color: #933605;
+}
+  
+form {
+    margin-top: 20px;
+   
+}
+  
+input{
+    padding-left: 250px;
+}
+
+label {
+    display: block;
+    margin-top: 20px;
+    text-align: left; /* Align the labels to the left */
+    color: #de8e2c;
+    cursor: pointer;
+    font-weight: bold;
+    padding-left: 250px;
+}
+  
+button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #de8e2c;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+  
+.file-upload-wrapper {
+    position: relative;
+}
+  
+.file-upload-wrapper::before {
+    content: 'Choose File';
+    display: block;
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+  
+.file-upload-field:focus + label {
+    outline: 1px dotted #000;
+}
+  
+  /* Code Block Styling */
+code {
+    display: block;
+    background-color: #f7f7f7;
+    padding: 10px;
+    margin-top: 20px;
+    font-size: 14px;
+    overflow-x: auto;
+}
+  

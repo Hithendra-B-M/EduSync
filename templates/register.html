@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AAA - Registration</title>
+    <link rel="stylesheet" href="/static/css/register.css" />
+    <link rel="title icon" href="/static/images/head.png" type="image/png" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <img src="/static/images/logo1.png" />
+      <div class="title" data-translate>New Institute</div>
+      <div class="form">
+        <div class="inputfield">
+          <label data-translate>College name</label>
+          <input id="college-name" type="text" class="input" />
+        </div>
+        <div class="inputfield">
+          <label data-translate>Institute type</label>
+          <input id="institute-type" type="text" class="input" />
+        </div>
+        <!-- <div class="inputfield">
+          <label>Password</label>
+          <input type="password" class="input" />
+        </div>
+        <div class="inputfield">
+          <label>Confirm Password</label>
+          <input type="password" class="input" />
+        </div> -->
+        <div class="inputfield">
+          <label data-translate>State</label>
+          <div class="custom_select">
+            <select id="state">
+              <option value="" data-translate>Select State</option>
+              <option value="Andhra Pradesh" data-translate>Andhra Pradesh</option>
+              <option value="Arunachal Pradesh" data-translate>Arunachal Pradesh</option>
+              <option value="Assam" data-translate>Assam</option>
+              <option value="Bihar" data-translate>Bihar</option>
+              <option value="Chhattisgarh" data-translate>Chhattisgarh</option>
+              <option value="Goa" data-translate>Goa</option>
+              <option value="Gujarat" data-translate>Gujarat</option>
+              <option value="Haryana" data-translate>Haryana</option>
+              <option value="Himachal Pradesh" data-translate>Himachal Pradesh</option>
+              <option value="Jharkhand" data-translate>Jharkhand</option>
+              <option value="Karnataka" data-translate>Karnataka</option>
+              <option value="Kerala" data-translate>Kerala</option>
+              <option value="Madhya Pradesh" data-translate>Madhya Pradesh</option>
+              <option value="Maharashtra" data-translate>Maharashtra</option>
+              <option value="Manipur" data-translate>Manipur</option>
+              <option value="Meghalaya" data-translate>Meghalaya</option>
+              <option value="Mizoram" data-translate>Mizoram</option>
+              <option value="Nagaland" data-translate>Nagaland</option>
+              <option value="Odisha" data-translate>Odisha</option>
+              <option value="Punjab" data-translate>Punjab</option>
+              <option value="Rajasthan" data-translate>Rajasthan</option>
+              <option value="Sikkim" data-translate>Sikkim</option>
+              <option value="Tamil Nadu" data-translate>Tamil Nadu</option>
+              <option value="Telangana" data-translate>Telangana</option>
+              <option value="Tripura" data-translate>Tripura</option>
+              <option value="Uttar Pradesh" data-translate>Uttar Pradesh</option>
+              <option value="Uttarakhand" data-translate>Uttarakhand</option>
+              <option value="West Bengal" data-translate>West Bengal</option>
+            </select>
+          </div>
+        </div>
+        <div class="inputfield">
+          <label data-translate>Email Address</label>
+          <input id="email" type="text" class="input" />
+        </div>
+        <div class="inputfield">
+          <label data-translate>Contact Number</label>
+          <input id="contact-number" type="text" class="input" />
+        </div>
+        <div class="inputfield">
+          <label data-translate>Address</label>
+          <textarea id="college-address" class="textarea"></textarea>
+        </div>
+        <div class="inputfield">
+          <label data-translate>Postal Code</label>
+          <input id="postal-code" type="text" class="input" />
+        </div>
+        <div class="inputfield terms">
+          <label class="check">
+            <input id="check-box" type="checkbox" />
+            <span class="checkmark"></span>
+          </label>
+          <p data-translate>Agreed to terms and conditions</p>
+        </div>
+        <div class="inputfield">
+          <button id="register-button" type="submit" value="Register" class="btn" data-translate>Register</button>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/static/js/register.js"></script>
+  </body>
+</html>

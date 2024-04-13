@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AAA - LogIn</title>
+    <link rel="stylesheet" href="/static/css/login.css" />
+    
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <link
+      rel="title icon"
+      href="/static/images/head.png"
+      type="image/png"
+    />
+  </head>
+  <body>
+    <div class="infographics">
+    <img src="/static/images/login.svg">
+  </div>
+    <section class="container">
+      
+      <div class="image-section">
+        <div class="content-container">
+          <h1 class="section-heading" data-translate>
+            AI based Assitive Approval<span> AAA</span>
+          </h1>
+          <p class="section-paragraph" data-translate>
+            Aprooval process now made easy using AI technology for Assistance.
+          </p>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <div class="form-wrapper">
+          <div class="logo-container">
+            <a href="{{ url_for('index') }}" class="logo-container">
+              <img src="/static/images/logo1.png" alt="Logo" />
+            </a>
+          </div>
+
+          <h2 data-translate>Sign In</h2>
+          <p data-translate>Enter your credentials to access your account.</p>
+
+          <div class="input-container">
+            <div class="form-group">
+              <label for="email" data-translate>Username</label>
+              <input id="email" type="email" id="email" autocomplete="off" />
+            </div>
+            <div class="form-group">
+              <label for="password" data-translate>Password</label>
+              <input id="password" type="password" id="password" autocomplete="off" />
+            </div>
+          </div>
+
+          <div class="remember-forgot">
+            <a href="{{ url_for('register') }}" data-translate>New Institute ?</a><span> | </span>
+            <a href="#" id='popup-link' data-translate>Change password</a>
+          </div>
+
+          <div id="popup-window">
+            <h1 data-translate>OTP Using JavaScript</h1>
+            <div class="form">
+              <div class="form-group">
+                <label for="popup-email" data-translate>Email</label>
+                <input type="email" id="popup-email" placeholder="Enter Email" />
+              </div>
+
+              <button id="send-OTP" onclick="sendOTP()" class="btn" data-translate>Send OTP</button>
+
+              <div class="form-group">
+                <input type="text" id="otp_inp" placeholder="Enter the OTP"/>
+              </div>
+
+              <button class="btn" id="otp-btn" data-translate>Verify</button>
+            </div>
+            <button id="close-button" data-translate>Close</button>
+          </div>
+
+          <button id="login-button" class="login-btn" data-translate>Log In</button>
+    </section>
+    <script type="module" src="/static/js/login.js"></script>
+  </body>
+</html>
